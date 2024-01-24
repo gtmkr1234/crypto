@@ -25,20 +25,21 @@ while(True):
     """)
     option = int(input())
     if option == 1:
-        pt = input("Enter the plane text")
-        key = int(input("Enter the key"))
+        pt = input("Enter the plane text - ")
+        key = int(input("Enter the key - "))
         cipher = autokey_encrypt(pt,key)
         print(cipher)
 
     if option == 2:
-        ct = input("Enter the cipherText")
-        key = int(input("Enter the key"))
+        ct = input("Enter the cipherText - ")
+        key = int(input("Enter the key - "))
         plane = autokey_decrypt(ct,key)
         print(plane)
 
     if option == 3:
-        pt = input("Enter the plane text")
-        ct = input("Enter the cipher text")
+        pt = input("Enter the plane text - ")
+        ct = input("Enter the cipher text - ")
+        print("The key for this encryption is - ")
         print(bruteforce(pt,ct))
 
     if option == 0:
